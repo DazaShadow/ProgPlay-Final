@@ -1,0 +1,44 @@
+{% extends 'ProgPlay/Blog.html' %}
+
+{% block header %}
+{% load static %}
+
+<div class="card mb-3 col-xs-12 Jum">
+	<h1>
+		Mi perfil
+	</h1>
+	<br>
+	<form class="color">
+		<img src="{% static 'Progplay/img/perfil.jpg' %}" class="card-img img-fluid " alt="...">
+		<div class=" row form-group col-xs-12 col-lg">
+			<ul>
+				<li>
+					<label for="exampleFormControlFile1">Nombre </label>
+					{{user.first_name}}
+				</li>
+				<li>
+					<label for="exampleFormControlFile1">Nickname </label>
+					{{user.username}}
+				</li>
+				<li>
+					<label for="exampleFormControlFile1">Correo </label>
+					{{user.email}}
+				</li>
+			</ul>
+		</div>
+	</form>
+	<br>
+</div>
+
+{% endblock header %}
+
+{% block barra_busqueda %}
+
+{% endblock barra_busqueda %}
+
+{% block contenido2 %}
+
+{% endblock contenido2 %}
+
+{% block contenido %}
+{% endblock contenido %}

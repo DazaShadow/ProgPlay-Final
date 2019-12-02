@@ -1,0 +1,79 @@
+{% extends 'ProgPlay/plantilla.html' %}
+
+{% block contenido %}
+
+{% load static %}
+
+    
+<br>
+<div class="container-color">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+        
+        <div class="carousel-inner ">
+            <div class="carousel-item active col ">
+                <img src="{% static 'Progplay/img/Central.jpg' %}" class="d-block w-100 img-central img-fluid" alt="...">
+            </div>
+            <div class="carousel-item col-xs-12 col">
+                <img src="{% static 'Progplay/img/Central2.jpg' %}" class="d-block w-100 img-central img-fluid" alt="...">
+            </div>
+            <div class="carousel-item col-xs-12 col ">
+                <img src="{% static 'Progplay/img/Central3.jpg' %}" class="d-block w-100 img-central img-fluid" alt="...">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+
+
+
+
+<div class="container-fluid barra img-central-color .padding-carddeck  ">
+    <div class="card-deck">
+        <div class="card card-size color-background col">
+            <img src="{% static 'Progplay/img/entrada1.gif' %}" class="card-img-top img-fluid img-entrada rounded-circle" alt="...">
+            <div class="card-body">
+                <h5 class="card-title cob">Aprende</h5>
+                <p class="card-text"></p>
+            </div>
+
+        </div>
+        <div class="card card-size color-background col">
+            <img src="{%static 'Progplay/img/entrada2.gif' %}" class="card-img-top img-fluid img-entrada rounded-circle" alt="...">
+            <div class="card-body">
+                <h5 class="card-title cob">Juega</h5>
+                <p class="card-text"></p>
+            </div>
+
+        </div>
+        <div class="card card-size color-background col">
+            <img src="{% static 'Progplay/img/entrada3.gif' %}" class="card-img-top img-fluid img-entrada rounded-circle" alt="...">
+            <div class="card-body ">
+                <h5 class="card-title cob">Programa</h5>
+                <p class="card-text"></p>
+            </div>
+
+        </div>
+    </div>
+    <div class="card text-center margin-content">
+
+        <div class="card-body">
+            <h5 class="card-title" >A programar se ha dicho!</h5>
+            <p class="card-text">
+
+            </p>
+            <a href="#" class="btn btn-primary">Comenzar</a>
+        </div>
+    </div>
+    <br>
+</div>
+
+
+{% endblock contenido %}

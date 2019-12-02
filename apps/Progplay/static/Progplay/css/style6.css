@@ -1,0 +1,56 @@
+div[id ^='container'] {
+  width: 400px;
+  height: 110px;
+  background: rgba(38,104,127,0.8);
+  border: 3px solid rgba(38,104,127, 1);
+  margin: 5px auto;
+  padding: 4px;
+  line-height: 120px;
+  color: rgba(38,104,127,0);
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+user agent stylesheet
+div {
+  display: block;
+}
+
+
+div[id ^='caja'] {
+  width: 330px;
+  height: auto;
+  background: rgba(204, 0, 0, 0.8);
+  border: 3px solid rgba(204, 0, 0, 1);
+  margin: 5px auto;
+  padding: 40px;
+  line-height: 20px;
+  color: #FFF;
+  font-size: 15px;
+  font-weight: normal;
+  text-align: left;
+}
+
+
+.container-color{
+
+background-color: aquamarine;
+padding: 80px;
+}
+
+body{
+
+overflow: hidden;
+}
+
+header{
+
+padding-bottom: 80px;
+background-color: black;
+text-align: center;
+color: white;
+
+
+}
+  
+

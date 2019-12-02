@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html lang="es-cl">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'Progplay/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'Progplay/css/flexboxgrid.css' %}">
+  <link rel="stylesheet" href="{% static 'Progplay/css/style.css' %}">
+  <title>ProgPlay Inicio</title>
+
+</head>
+
+<body>
+
+  <header>
+<nav class="navbar navbar-expand-lg navbar-light  bg-light">
+  <a class="navbar-brand" href="{% url 'Inicio' %}">ProgPlay</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse  " id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link tab" href="{% url 'Inicio:Juegos' %}">Juegos <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link tab" href="{% url 'Inicio:QuienesSomos' %}">¿Quienes Somos?</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link tab" href="{% url 'Inicio:Preguntas' %}" tabindex="-1" aria-disabled="true">Preguntas
+          Frecuentes</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link tab dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Blog
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'Inicio:Blog' %}"> Inicio Blog</a>
+        </div>
+      </li>
+    
+    
+    </ul>
+<div class="col-lg-2 center-xs ">
+  <button type="button" class="btn btn-outline-success my-2 my-sm-0 button sub btn-block" >
+    <a href="{% url 'Login' %}">Entrar</a>
+    
+  </button>
+
+
+</div>
+<div class="col-lg-2 center-xs ">
+  <button type="button" class="btn btn-outline-danger button sub btn-block"><a target="_blank"
+      href="{% url 'Inicio:Contactos' %}">Comenzar</a></button>
+    </button>
+  </div>
+
+   
+  </div>
+</nav>
+  </header>
+
+
+
+  {% block contenido %}
+
+  {% endblock contenido %}
+
+
+  <!-- FOOTER START -->
+  <div class="footer">
+    <br>
+    <div class="contain">
+      <div class="col">
+        <h1>Socios</h1>
+        <ul>
+          <li>Juan pablo Aburto</li>
+          <li>Daniel Daza</li>
+          <li>Roberto Valenzuela</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1></h1>
+        <ul>
+          
+        </ul>
+      </div>
+      <div class="col">
+        <h1>Correos</h1>
+        <ul>
+            <li>jua.aburto@alumnos.duoc.cl</li>
+            <li>dan.daza@alumnos.duoc.cl</li>
+            <li>rj.valenzuela@alumnos.duoc.cl</li>
+        </ul>
+      </div>
+      <div class="col">
+
+      </div>
+      <div class="col">
+        <h1></h1>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="col social">
+        <h1>Social</h1>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com"><img src="https://svgshare.com/i/FoV.svg" width="32"
+                style="width: 32px;"></a>
+          </li>
+          <li>
+            <a href="https://twitter.com"><img src="https://svgshare.com/i/FnW.svg" width="32"
+                style="width: 32px;"></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com"><img src="https://svgshare.com/i/FpE.svg" width="32"
+                style="width: 32px;"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+
+
+</body>
+
+<!--JS FILES-->
+<script src="{% static 'Progplay/js/jquery-3.4.1.js' %}"></script>
+<script src="{% static 'Progplay/js/jquery.validate.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="{% static 'Progplay/js/bootstrap.js' %}"></script>
+<script src="{% static 'Progplay/js/app.js' %}"></script>
+
+
+
+</html>

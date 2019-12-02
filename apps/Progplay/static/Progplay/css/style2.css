@@ -1,0 +1,139 @@
+#footer{
+
+background-color: #5a1c8d;
+}
+
+#nav{
+
+background-color: #2e8cea;
+
+}
+
+img{
+
+max-width: 100%;
+display: block;
+width: 500px;
+margin-top: auto;
+margin-bottom: auto;
+
+}
+
+
+body{
+
+background-color:#55efc4;
+
+}
+
+.margin{
+
+padding: 20px;
+
+}
+
+.Jum{
+
+    background-color: #2d3436;
+    
+}
+
+p{
+
+    font-size: 20px;
+    color:white;
+
+}
+
+.Fu{
+    color: white;
+}
+
+.cardy{
+
+background-color: #2d3436;
+margin-bottom: 35px;
+
+
+}
+.uwu{
+    color:white;
+}
+
+.img-card{
+
+height: 100px;
+width: 100px;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+
+h5{
+
+text-align: center;
+
+}
+
+h2{
+
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+
+}
+
+.card-margin{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #043247;
+    padding: 30px;
+    
+    
+    
+}
+
+
+.row-back{
+
+
+    background-color: #043247;
+    border: solid white;
+    
+}
+html{
+
+    text-decoration: none;
+  }
+
+body{
+
+
+    font-family: 'Anonymous Pro', monospace;
+    background-color: #7f8fa6;
+    text-decoration: none;
+}
+
+.header {
+    background-color: #043247;
+    
+    
+    }
+
+    .button{
+
+        margin-left:10px;
+    }
+
+
+    video{
+
+        height: 500px;
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        
+     
+        
+        }

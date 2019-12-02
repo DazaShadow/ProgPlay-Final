@@ -1,0 +1,74 @@
+{% extends 'ProgPlay/plantilla.html' %}
+
+
+{% block contenido %}
+
+{% load static %}
+
+<br>
+
+<form a method="POST" class="con " id="formulario">
+         {% csrf_token %}
+  <h2 class="tab">Registrate y conoce el mundo de la programacion</h2>
+  <hr>
+  <div class="row ">
+    <div class="col">
+      <label class="tab" for="validationCustom01">Nombre Completo</label>
+      <input type="text" class="form-control center-placeholder" id="validationCustom01"
+            placeholder="Ingrese nombre completo" name="NombreUsuario" required>
+      <br>
+
+      <label class="tab" for="validationCustomUsername">Correo</label>
+      <input type="email" class="form-control center-placeholder" id="validationCustom01" name="Correo"
+            placeholder="Ingrese correo" required>
+      <br>
+
+      <label class="tab" for="validationCustom04">Pais</label>
+     
+      <select class="form-control center-select" id="" name="idPais" >
+        {% for p in Pais %}
+        <option value="{{p.idPais}}">{{p.NombrePais}}</option>
+        {% endfor %}
+     </select>
+      <br>
+
+      <label class="tab" for="validationCustom06">Alias</label>
+      <input type="text" class="form-control center-placeholder" id="validationCustom01"
+      placeholder="Ingrese Alias" name="Nickname" required>
+      <br>
+
+      <label class="tab" for="validationCustom07">Contraseña</label>
+      <input type="password" class="form-control center-placeholder" id="validationCustom01"
+      placeholder="Ingrese contraseña" name="ClaveUsuario" required>
+      <br>
+
+      <label class="tab" for="validationCustom07">Repita la contraseña</label>
+      <input type="password" class="form-control center-placeholder" id="validationCustom01"
+      placeholder="Ingrese contraseña" name="ClaveUsuario2" required>
+      <br>
+
+      <p></p>
+      <input type="submit" value="Enviar" id="boton">
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+      <br>
+      <p class="info"><strong>¿Deseas saber programación?</strong> Aprende con nosotros a través de este formulario.
+      </p>
+
+      <p class="info tab">Este programa te ayudara a conocer la programación a traves de <strong> juegos
+          interactivos</strong>. Regístrate y sé el programador del futuro.</p>
+
+      <img src="{% static 'Progplay/img/img_contacto2.jpg' %}" class="img-rounded img-responsive"
+        alt="Placeholder image">
+    </div>
+  </div>
+
+</form>
+
+<br>
+
+
+
+{% endblock contenido %}

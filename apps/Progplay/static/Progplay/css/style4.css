@@ -1,0 +1,95 @@
+#right{
+    text-align: right;
+}
+
+
+
+
+#margin-left{
+    margin-left: left ;
+}
+
+.container-sizes{
+
+    margin-left: auto ;
+    margin-right: auto ;
+    padding: 100px;
+    
+
+}
+
+.vas{
+
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+.colap-color{
+    
+    margin-left: auto ;
+    margin-right: auto ;
+    padding: 20px;
+   
+    
+
+}
+
+label{
+
+
+    color: white;
+}
+
+header{
+
+    background-color: #043247;
+}
+
+.ero{
+font-size: 30 px;
+}
+
+h1 {
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+
+
+}
+
+
+
+p{
+    font-size: 20px;
+    text-align: center center;
+}
+
+h5{
+    font-size: 35px;
+    text-align: center;
+}
+
+
+
+
+.ta{
+    font-size: 25px;
+}
+
+h2{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+
+}
+
+body{
+
+
+    font-family: 'Anonymous Pro', monospace;
+    background-color: #7f8fa6;
+   
+}

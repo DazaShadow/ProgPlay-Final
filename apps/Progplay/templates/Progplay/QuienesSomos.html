@@ -1,0 +1,121 @@
+
+
+
+{% extends 'ProgPlay/plantilla.html' %}
+
+{% block contenido %}
+
+{% load static %}
+
+
+
+ <div class="container-fluid margin">
+
+    <div class="row ">
+      <div class="jumbotron Jum col-lg-8">
+        <h2 class="display-4 Fu ">¿Quienes Somos?</h2>
+        <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum dolores voluptates inventore,
+          veniam pariatur, esse fugiat corporis numquam consectetur animi adipisci ea earum doloremque voluptatum
+          aspernatur repudiandae quo odio nesciunt.</p>
+        <hr class="my-4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, labore unde. Ab iure accusantium nisi atque in
+          laudantium quia iusto maxime, voluptas a dolor illum reiciendis nihil optio, delectus magnam?</p>
+      </div>
+      <div class="card-fluid col-lg-4">
+        <div class="card cardy ">
+          <img src="{% static 'Progplay/img/LUP.jpg' %}" class="card-img-top img-fluid" alt="...">
+
+        </div>
+      </div>
+    </div>
+    <div class="container header padding rounded-lg">
+      <div class="row">
+        <video src="{% static 'Progplay/img/video.mp4' %}" class="col-lg-8" controls preload>
+
+
+          <source src="{% static 'Progplay/img/video.ogv' %}" type='video/ogg codecs="theora,vorbis"' />
+          <source src="{% static 'Progplay/img/video.webm' %}" type='video/webm codecs="vp8,vorbis"' />
+          <source src="{% static 'Progplay/img/video.mp4' %}" type='video/mp4 codecs="avc1,mp4a"' />
+
+        </video>
+
+      </div>
+      <br>
+
+    </div>
+
+    <br>
+    <div class="row   ">
+
+
+      <div class="row ">
+
+        <div class="card-fluid col-lg-4">
+          <div class="card cardy ">
+            <img src="{% static 'Progplay/img/Gif.gif' %}" class="card-img-top img-fluid" alt="...">
+
+          </div>
+        </div>
+        <div class="jumbotron Jum col-lg-8">
+          <h2 class="display-4 Fu ">Objetivo</h2>
+          <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum dolores voluptates inventore,
+            veniam pariatur, esse fugiat corporis numquam consectetur animi adipisci ea earum doloremque voluptatum
+            aspernatur repudiandae quo odio nesciunt.</p>
+          <hr class="my-4">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, labore unde. Ab iure accusantium nisi atque
+            in laudantium quia iusto maxime, voluptas a dolor illum reiciendis nihil optio, delectus magnam?</p>
+        </div>
+
+      </div>
+
+
+      <div class="container-fluid col-lg-10 header rounded-lg">
+        <div class="row col-lg-12">
+          <h2 class="xs-center tab">
+            Empresas con convenio
+          </h2>
+        </div>
+        <div class="row col-lg-12">
+
+
+
+          <div class="card-deck card-margin col-lg-10 ">
+            <div class="card  ">
+              <img src="{% static 'Progplay/img/C-char.png' %} " class="card-img-top img-card img-fluid " alt="...">
+              <div class="card-body">
+                <h4 class="card-title">C#</h4>
+
+
+              </div>
+              <button type="button" class="btn btn-primary">Conocer</button>
+            </div>
+            <div class="card  ">
+              <img src="{% static 'Progplay/img/java2.png' %} " class="card-img-top img-card img-fluid" alt="...">
+              <div class="card-body">
+                <h4 class="card-title">Java</h4>
+
+
+              </div>
+              <button type="button" class="btn btn-primary">Conocer</button>
+            </div>
+            <div class="card  ">
+              <img src="{% static 'Progplay/img/pythom.png' %} " class="card-img-top img-card img-fluid " alt="...">
+              <div class="card-body">
+                <h4 class="card-title">Python</h4>
+
+
+              </div>
+              <button type="button" class="btn btn-primary">Conocer</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+
+  {% endblock contenido %}

@@ -1,0 +1,238 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'Progplay/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'Progplay/css/flexboxgrid.css' %}">
+  <link rel="stylesheet" href="{% static 'Progplay/css/style.css' %}">
+  <title>ProgPlay Inicio</title>
+
+</head>
+
+
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light  bg-light">
+    <a class="navbar-brand" href="{% url 'Blog:Blog' %}">Blog-ProgPlay</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+        <li class="nav-item active">
+          <a class="nav-link tab" href="{% url 'Blog:generales' %}">Generales <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link tab" href="{% url 'Blog:tutoriales' %}">Tutoriales <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link tab" href="{% url 'Blog:noticias' %}">Noticias <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link tab" href="{% url 'Blog:programacion' %}">Programacion <span
+              class="sr-only">(current)</span></a>
+        </li>
+
+
+
+      </ul>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <img src="{% static 'Progplay/img/home.jpg' %}" class="d-block w-25 img-fluid col-xs-12">
+        </a>
+        <div class="col-lg-4 col-xs-12 ">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{% url 'Blog:Perfil' %}">Perfil</a>
+            <a class="dropdown-item" href="{%url 'logout' %}">Cerrar sesión</a>
+            <div class="dropdown-divider"></div>
+          </div>
+      </li>
+    </div>
+
+    </div>
+  </nav>
+
+  {% block header %}
+  <!-- Page Header -->
+
+  <header class="masthead" id="yt_header">
+    <div class="site-heading">
+      {% block titulo %}
+      <div class="col-xs-3">
+        <h1 class="Progplay-Size">Blog ProgPlay</h1>
+      </div>
+      {% endblock titulo %}
+    </div>
+    <br>
+  </header>
+  {% endblock header %}
+
+  {% block barra_busqueda %}
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-md-12 col-xs-12 ">
+        <form method="get">
+          <div id="custom-search-input ">
+            <div class="input-group col-md-12 col-xs-12">
+              <input type="text" class="form-control" placeholder="Buscar..." name="buscar"
+                value="{{ request.GET.buscar }}">
+              <span class="input-group-list">
+                <i class="icon icon-search"></i>
+                <button type="submit" class=" button btn-outline-success">Buscar</button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  {% endblock barra_busqueda %}
+  <!-- Main Content -->
+  {% block contenido2 %}
+  <div class="container-fluid color-background">
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {% block contenido %}
+        {% if posts %}
+        {% for post in posts %}
+        <div class="post-preview">
+          <a href="{% url 'Blog:detallePost' post.slug %}">
+            <h2 class="post-title">
+              {{ post.titulo }}
+            </h2>
+            <h3 class="post-subtitle">
+              {{ post.descripcion }}
+            </h3>
+          </a>
+          el
+          {{ post.fecha_creacion }}</p>
+        </div>
+        <hr>
+        {% endfor %}
+        {% else %}
+        <h1>No existen post registrados!</h1>
+        {% endif %}
+        <hr>
+        {% endblock contenido %}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6 float-left">
+        {% if posts.has_previous %}
+        <div class="clearfix">
+          <a href="?page={{ posts.previous_page_number }}{% if request.GET.search %}&q={{ request.GET.search }}{% endif %}"
+            class="btn btn-primary float-left">Anterior</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6  float-right">
+        {% if posts.has_next %}
+        <div class="clearfix">
+          <a href="?page={{ posts.next_page_number }}{% if request.GET.search %}&q={{ request.GET.search }}{% endif %}"
+            class="btn btn-primary float-right">Siguiente</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endblock contenido2 %}
+
+  <!-- Footer -->
+  <!-- FOOTER START -->
+  <div class="footer">
+    <br>
+    <div class="contain">
+      <div class="col">
+        <h1>Socios</h1>
+        <ul>
+          <li>Juan pablo Aburto</li>
+          <li>Daniel Daza</li>
+          <li>Roberto Valenzuela</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1></h1>
+        <ul>
+
+        </ul>
+      </div>
+      <div class="col">
+        <h1>Correos</h1>
+        <ul>
+          <li>jua.aburto@alumnos.duoc.cl</li>
+          <li>dan.daza@alumnos.duoc.cl</li>
+          <li>rj.valenzuela@alumnos.duoc.cl</li>
+        </ul>
+      </div>
+      <div class="col">
+
+      </div>
+      <div class="col">
+        <h1></h1>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="col social">
+        <h1>Social</h1>
+        <ul>
+          <li>
+              <li>
+                  <a href="https://www.facebook.com"><img src="https://svgshare.com/i/FoV.svg" width="32"
+                      style="width: 32px;"></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com"><img src="https://svgshare.com/i/FnW.svg" width="32"
+                      style="width: 32px;"></a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com"><img src="https://svgshare.com/i/FpE.svg" width="32"
+                      style="width: 32px;"></a>
+                </li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'Progplay/js/jquery-3.4.1.js' %}"></script>
+  <script src="{% static 'Progplay/js/jquery.validate.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="{% static 'Progplay/js/bootstrap.js' %}"></script>
+  <script src="{% static 'Progplay/js/app.js' %}"></script>
+
+</body>
+
+</html>
